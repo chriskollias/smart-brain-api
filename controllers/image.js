@@ -1,11 +1,11 @@
-const USER_ID = "chriskollias500";
+const USER_ID = process.env.CLARIFAI_USER_ID;
 
 // Your PAT (Personal Access Token) is actually just the API key
-const PAT = "c71961b6dcbb462fac8ca6c50b7c9665";
+const PAT = process.env.CLARIFAI_API_KEY;
 
-const APP_ID = "my-first-application";
-const MODEL_ID = "face-detection";
-const MODEL_VERSION_ID = "6dc7e46bc9124c5c8824be4822abe105";
+const APP_ID = process.env.CLARIFAI_APP_ID;
+const MODEL_ID = process.env.CLARIFAI_MODEL_ID;
+const MODEL_VERSION_ID = process.env.CLARIFAI_MODEL_VERSION_ID;
 
 
 const handleAPICall = (req, res) => {
