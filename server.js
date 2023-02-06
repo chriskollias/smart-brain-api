@@ -8,7 +8,11 @@ const signin = require("./controllers/signin");
 const profile = require("./controllers/profile");
 const image = require("./controllers/image");
 
+// grab port from heroku env variable, or default to 3000
 const PORT = process.env.PORT || 3000;
+
+// to deal with SSL issue
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 // setup database connection
 const db = knex({
